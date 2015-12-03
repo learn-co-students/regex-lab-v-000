@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe "Working with Regular expressions" do
-  describe "#{}starts_with_a_vowel?" do
+  describe "#starts_with_a_vowel?" do
     it "returns true for words starting with a vowel" do
       match = %w{ afoot Excellent incredible Absolute unreal Inconceivable octopus }
 
@@ -40,22 +40,21 @@ describe "Working with Regular expressions" do
   end
 
   describe "#first_word_capitalized_and_ends_with_punctuation?" do
-    it "Returns true for text starting with a capital letter and ending with puncutation" do
+    it "Returns true for text starting with a capital letter and ending with punctuation" do
       correct_punctuation = "I stepped on a Corn Flake, now I'm a cereal killer."
       expect(first_word_capitalized_and_ends_with_punctuation?(correct_punctuation)).to eq(true)
     end
-    it "Returns false for text starting with an uncapitalized letter but ending with puncutation" do
+    it "Returns false for text starting with an uncapitalized letter but ending with punctuation" do
       incorrect_punctuation = "i wondered why the baseball was getting bigger. Then it hit me."
       expect(first_word_capitalized_and_ends_with_punctuation?(incorrect_punctuation)).to eq(false)
     end
 
-    it "Returns false for text starting with a capital letter but ending without puncutation" do
+    it "Returns false for text starting with a capital letter but ending without punctuation" do
       incorrect_punctuation = "Did you hear about the guy whose whole left side was cut off? He's all right now"
       expect(first_word_capitalized_and_ends_with_punctuation?(incorrect_punctuation)).to eq(false)
     end
-    it "Returns false for text starting without a capital letter and ending without puncutation" do
-      incorrect_punctuation = "when fish are in schools, they sometimes take debate
-"
+    it "Returns false for text starting without a capital letter and ending without punctuation" do
+      incorrect_punctuation = "when fish are in schools, they sometimes take debate"
       expect(first_word_capitalized_and_ends_with_punctuation?(incorrect_punctuation)).to eq(false)
     end
   end
@@ -75,6 +74,4 @@ describe "Working with Regular expressions" do
       end
     end
   end
-
-
 end
