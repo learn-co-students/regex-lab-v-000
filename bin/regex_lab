@@ -1,0 +1,23 @@
+require_relative "../lib/regex_lab.rb"
+
+print valid_phone_number?("626 975 7771")
+print valid_phone_number?("6269757771")
+
+correct_punctuation = "I stepped on a Corn Flake, now I'm a cereal killer."
+puts first_word_capitalized_and_ends_with_punctuation?(correct_punctuation)
+
+words_string = "extreme briny crepe parking snaps grouping snafu round dog be fork spoon"
+print words_five_letters_long(words_string)
+
+words_string = "unassuming ambiguous understanding pomp circumstance uninteresting uncompromising grouchy corollary"      
+print words_starting_with_un_and_ending_with_ing(words_string)
+
+do_not_match = %w{ chandoo Crenel crooked Flimsy folksy Dog Hermit 
+  makeshift Palazzi sixfold Truth }
+match = %w{ afoot Excellent incredible Absolute unreal Inconceivable octopus }
+do_not_match.each do |word|
+  puts starts_with_a_vowel?(word)
+end
+match.each do |word|
+  puts starts_with_a_vowel?(word)
+end
