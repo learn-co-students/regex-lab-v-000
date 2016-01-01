@@ -29,7 +29,7 @@ describe "Working with Regular expressions" do
       expect(words_starting_with_un_and_ending_with_ing(words_string)).not_to include("pomp")
       expect(words_starting_with_un_and_ending_with_ing(words_string)).not_to include("interesting")
       expect(words_starting_with_un_and_ending_with_ing(words_string)).not_to include("unintended")
-      expect(words_starting_with_un_and_ending_with_ing(words_string)).not_to include("scrunching")
+      expect(words_starting_with_un_and_ending_with_ing(words_string)).not_to include("unching")
     end
   end
 
