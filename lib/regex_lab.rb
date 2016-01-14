@@ -33,7 +33,17 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
   end
 
 def valid_phone_number?(phone)
-  phone.match(/^.?\d{3}.?\d{3}.?\d{4}$/) ? true : false
+
+  #after submission, noticed some flaws in my code. this is going to be faulty because if any of the optional wildcards slots are a letter, the method will still return true
+  #phone.match(/\A.?\d{3}.?\d{3}.?\d{4}\z/) ? true : false
+
+  #had to specify my code further so this wouldn't happen:
+  phone.match(/\A[( ]?\d{3}[)-\. ]?\d{3}[-\. ]?\d{4}\z/) ? true : false
+
+  #noticed the following solution after submission:
+  #phone.scan(/\d/).length == 10 ? true : false
+  #this is going to be faulty because if by chance, there is a letter mixed up in there, as long as there are 10 digits, the method will return true when it really is not a valid phone number.
+  #however, it is good to note that I can chain array methods to the end of the regex when using scan/grep
 end
 
 
