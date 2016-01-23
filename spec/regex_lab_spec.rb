@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'pry'
 
 describe "Working with Regular expressions" do
   describe "#{}starts_with_a_vowel?" do
@@ -32,7 +33,7 @@ describe "Working with Regular expressions" do
 
   describe "#words_five_letters_long" do
     it "returns an array of words that are five letters long" do
-      words_string = "extreme briny crepe parking snaps grouping snafu round dog be fork spoon"
+      words_string = "EXTREME BRINY CREPE PARKING SNAps grouping snafu round dog be fork spoon"
       expect(words_five_letters_long(words_string).count).to eq(6)
       expect(words_five_letters_long(words_string)).to include("snafu")
       expect(words_five_letters_long(words_string)).not_to include("fork")
@@ -64,6 +65,7 @@ describe "Working with Regular expressions" do
     it "returns true for valid phone numbers, regardless of formatting" do
       valid_numbers = ["2438894546", "(718)891-1313", "234 435 9978", "(800)4261134"]
       valid_numbers.each do |number|
+#        binding.pry
         expect(valid_phone_number?(number)).to be(true)
       end
     end
