@@ -1,0 +1,17 @@
+require_relative '../lib/regex_lab.rb'
+
+word = "Apple"
+text = "unassuming ambiguous understanding pomp circumstance uninteresting uncompromising grouchy corollary unusual"
+five_letters_long_text = "extreme briny crepe parking snaps grouping snafu round dog be fork spoon"
+
+puts starts_with_a_vowel?(word)
+
+words_starting_with_un_and_ending_with_ing(text)
+
+words_five_letters_long(five_letters_long_text)
+
+
+
+correct_punctuation = "I stepped on a Corn Flake, now I'm a cereal killer."
+
+first_word_capitalized_and_ends_with_punctuation(correct_punctuation)
