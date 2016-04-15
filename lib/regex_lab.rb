@@ -16,6 +16,19 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
   true : false
 end
 
-def valid_phone_number?(phone)
-
+def valid_phone_number?(text)
+  if text.match(/\d{6}/) != nil 
+    true
+  elsif text.match(/\(\d{3}\)\d{7}/) != nil 
+    true
+  elsif text.match(/\(\d{3}\)\d{3}\s\d{4}/) != nil 
+    true
+  elsif text.match(/\(\d{3}\)\d{3}\-\d{4}/) != nil 
+    true  
+  elsif text.match(/\d{3}\s\d{3}\s\d{4}/) != nil 
+    true  
+  else
+    false
+  end
+      
 end
