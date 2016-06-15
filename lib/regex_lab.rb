@@ -21,23 +21,19 @@ def words_five_letters_long(text)
   five_letter_array = text.scan(/\b[a-z]{5}\b/i)
   return five_letter_array
 end
-text = "id you hear about the guy whose whole left side was cut off He's all right now"
+
 def first_word_capitalized_and_ends_with_punctuation?(text)
-  if text.match(/^[A-Z].*[\W\S]$/)
-    puts "good sentence"
+  if text.match(/^[A-Z].*[\W^\s]$/)
     true
-  elsif text.match(/^[a-z].*[\W\S]$/)
-    puts "missing capital"
+  elsif text.match(/^[a-z].*[\W^\s]$/)
     false
   elsif text.match(/^[A-Z].*[\w\s]$/)
-    puts "missing punctuation"
     false
   elsif text.match(/^[^A-Z].*[\w\s]$/)
-    puts "missing both"
     false
   end
 end
-first_word_capitalized_and_ends_with_punctuation?(text)
+
 def valid_phone_number?(phone)
   if phone.match(/^\(?\d{3}\)?[\s-]?\d{3}[\s-]?\d{4}$/)
     true
