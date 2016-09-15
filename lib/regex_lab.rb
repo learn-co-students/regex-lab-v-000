@@ -7,16 +7,18 @@ def words_starting_with_un_and_ending_with_ing(text)
 end
 
 def words_five_letters_long(text)
-  text.split(" ").grep(/\A\w{5}\z/)
+  # text.split(" ").grep(/\A\w{5}\z/)
+  text.scan(/\b\w{5}\b/)
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
-  text_arr = text.split(" ")
-  if text_arr[0].match(/\A[A-Z]/) && text_arr[-1].match(/\.\z/)
-    true
-  else
-    false
-  end
+  # text_arr = text.split(" ")
+  # if text_arr[0].match(/\A[A-Z]/) && text_arr[-1].match(/\.\z/)
+  #   true
+  # else
+  #   false
+  # end
+  text.match(/\A[A-Z].*[\.?!]\z/) ? true : false
 end
 
 def valid_phone_number?(phone)
