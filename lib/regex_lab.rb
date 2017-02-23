@@ -15,13 +15,15 @@ def words_starting_with_un_and_ending_with_ing(text)
 end
 
 def words_five_letters_long(text)
-  five_letter_words = []
-  text.split(" ").collect do |w|
-    if !!(w.match(/^\w{5,5}$/))
-      five_letter_words << w
-    end
-  end
-  five_letter_words
+
+  text.scan(/^\w{5,5}$/)
+  # five_letter_words = []
+  # text.split(" ").collect do |w|
+  #   if !!(w.match(/^\w{5,5}$/))
+  #     five_letter_words << w
+  #   end
+  # end
+  # five_letter_words
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
