@@ -5,25 +5,11 @@ def starts_with_a_vowel?(word)
 end
 
 def words_starting_with_un_and_ending_with_ing(text)
-  un_ing = []
-  text.split(" ").collect do |w|
-    if !!(w.match(/^(un).{0,}(ing)$/i))
-      un_ing << w
-    end
-  end
-  un_ing
+  text.scan(/\bun\w+ing\b/)
 end
 
 def words_five_letters_long(text)
-
-  text.scan(/^\w{5,5}$/)
-  # five_letter_words = []
-  # text.split(" ").collect do |w|
-  #   if !!(w.match(/^\w{5,5}$/))
-  #     five_letter_words << w
-  #   end
-  # end
-  # five_letter_words
+  text.scan(/\b\w{5,5}\b/)
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
