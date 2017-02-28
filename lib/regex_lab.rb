@@ -1,5 +1,5 @@
 def starts_with_a_vowel?(word)
-  word.match(/\b[aeiou]/i) != nil ? true : false
+  word.match(/\b[aeiou]/i) ? true : false
 end
 
 def words_starting_with_un_and_ending_with_ing(text)
@@ -11,9 +11,9 @@ def words_five_letters_long(text)
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
-  text.match(/^[A-Z].*\W$/) != nil ? true : false
+  text.match(/^[A-Z].*\W$/) ? true : false
 end
 
 def valid_phone_number?(phone)
-  phone.gsub(/[^0-9]/, '').match(/\d{10}/) != nil ? true : false
+  phone.gsub(/[^0-9]/, '').match(/\d{10}/) ? true : false
 end
