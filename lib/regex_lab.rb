@@ -21,7 +21,7 @@ end
 end
 
 def valid_phone_number?(phone)
-if phone=~ /.\d{3}*\d{3}*\d{4}/
+if phone=~ /.\d{3}.*\d{3}*\d{4}/
   true
   #is this right?
 else false
