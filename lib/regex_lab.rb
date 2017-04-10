@@ -1,4 +1,4 @@
-def starts_with_a_vowel?(word)  #learn --fail-fast
+def starts_with_a_vowel?(word)  
 if word.match(/^[aeiouAEIOU]+\w+/)
   true
 else
@@ -17,9 +17,9 @@ def words_five_letters_long(text)
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
-text.match(/^[A-Z].\w+\[,.]\W$/) ? true : false
+text.match(/^[A-Z].+[!\.?]$/) ? true : false
 end
 
 def valid_phone_number?(phone)
-phone.match(/\(?\d{3}\)?\-?\d{3}\-?\d{4}/) ? true : false
+phone.match(/(\(\d{3}\)\d{3}\-\d{4}$|\d{3}\s\d{3}\s\d{4}|\(\d{3}\)\d{7}|\d{10})/) ? true : false
 end
