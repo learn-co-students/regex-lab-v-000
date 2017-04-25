@@ -18,15 +18,15 @@ end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
 text.scan(/^[A-Z].+\./)
-if text.scan(/^[A-Z].+\./).empty?
+ text.scan(/^[A-Z].+\./).empty? ? false:true
   #[A-Z] matches characters in the range of A-Z
   #. matches any characters
   #+ matches one or more of the preceeding token
   #\. is an escape characher that matches a "."character
-  false
-else
-  true
-  end
+  #false
+#else
+  #true
+  #end
 end
 
 def valid_phone_number?(phone)
