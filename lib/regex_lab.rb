@@ -17,33 +17,14 @@ def words_starting_with_un_and_ending_with_ing(text)
 end
 
 def words_five_letters_long(text)
-  split_array = text.split(" ")
-  new_array = []
-  split_array.each do |word|
-    if(word.length == 5)
-      new_array << word
-    end
-  end
-  return new_array
+  text.match(/\b\w{5}\b/)
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
-  if(text[0].match(/[A-Z]/) != nil && text[-1].match(/[?!.]/) != nil)
-    return true
-  end
-  return false
+  text.match(/^[A-Z].*[\.!?]$/) ? true : false
 end
 
 def valid_phone_number?(phone)
-  puts phone
-  count = 0
-  for number in 0..phone.length-1
-    if(phone[number].match(/[0-9]/) != nil)
-      count +=1
-    end
-  end
-  if(count != 10)
-    return false
-  end
-  return true
+  #\(?\d{3}\)? ?\d{3} ?-?\d{4}\b
+phone.match(/(\(?\d{3}\)? ?\d{3} ?-?\d{4}\b)/) ? true : false
 end
