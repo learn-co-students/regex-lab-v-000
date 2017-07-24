@@ -11,12 +11,9 @@ def words_five_letters_long(text)
   text.scan(/\b\w{5}\b/)
 end
 
+require 'pry'
 def first_word_capitalized_and_ends_with_punctuation?(text)
-  capital = false
-  punc = false
-  text.match(/\A[A-Z]/) != nil ? capital = true : false
-  text.match(/\W\z/) != nil ? punc = true : false
-  capital == punc
+  text.match(/\A[A-Z]/) != nil ? && text.match(/\W\z/) != nil ?
 end
 
 def valid_phone_number?(phone)
