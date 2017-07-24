@@ -1,0 +1,5 @@
+require_relative "../lib/test.rb"
+
+text = "I stepped on a Corn Flake, now I'm a cereal killer."
+
+first_word_capitalized_and_ends_with_punctuation?(text)
