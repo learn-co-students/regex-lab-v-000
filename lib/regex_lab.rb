@@ -1,5 +1,3 @@
-require 'pry'
-
 def starts_with_a_vowel?(word)
     word.to_s.match(/^[aeiouAEIOU]/)? true : false
 end
