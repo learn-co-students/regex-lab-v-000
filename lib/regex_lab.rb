@@ -14,7 +14,6 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
   !!(text.match(/\b[A-Z][^\w\d\s]/))
 end
 
-def valid_phone_number?(valid_numbers)
-  if /(\d{10}|(\(\d{3})\)\d{3}\-\d{4}|\d{3}\s\d{3}\s\d{4}|\(\d{3})\)\d{7}/.match(valid_numbers)
-  end
+def valid_phone_number?(phone_number)
+  !!(phone_number.match(/\d{10}|(\(\d{3})\)\d{3}\-\d{4}|\d{3}\s\d{3}\s\d{4}|(\(\d{3})\)\d{7}/))
 end
