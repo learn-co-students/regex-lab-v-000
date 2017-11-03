@@ -1,7 +1,10 @@
 def starts_with_a_vowel?(word)
- 
-   vowel = word.scan(/[aeiou].*/)
-    vowel.any?
+  
+  #^([aeyiuo]*|[^aeyiuo]*)$
+  vowel = word.scan(/[aeiou].*/)
+  vowel.any?
+  consonant = word.scan(/^[^aeyiuo]$/)
+    
 =begin
 if vowel# if word.scan returns a value, the expression is true 
     return true
