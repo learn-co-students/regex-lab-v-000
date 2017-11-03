@@ -1,9 +1,13 @@
 def starts_with_a_vowel?(word)
  
-   word.scan(/[aeiou].*/)
-   if # if word.scan returns a value, the expression is true 
-    
-   end
+   vowel = word.scan(/\A[aeiou].*/)
+    vowel.empty?
+=begin
+if vowel# if word.scan returns a value, the expression is true 
+    return true
+   else
+       return false
+=end
   
 end
 
