@@ -16,6 +16,7 @@ end
 
 def words_five_letters_long(text)
   #try regex with 5 characters then a space
+  # you can place the \b boundry at the beginning and end of regex to stop at a certain amount of characters
   five_words = text.scan(/\b\w{5}\b/)
 end
 
