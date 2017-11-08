@@ -11,10 +11,8 @@ end
 
 def words_starting_with_un_and_ending_with_ing(text)
   # match the "un" and "ing" then return the matching words
-  find_text = text.scan(/\w+[un][ing]/)
-    
+  find_text = text.scan(/\w+[un][ing]/) 
  
-  binding.pry
   
 end
 
