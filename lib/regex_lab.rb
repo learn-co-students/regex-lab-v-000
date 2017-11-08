@@ -15,7 +15,8 @@ def words_starting_with_un_and_ending_with_ing(text)
 end
 
 def words_five_letters_long(text)
-
+  #try regex with 5 characters then a space
+  text.scan(/\w/)
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
