@@ -22,10 +22,9 @@ end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
   # test for first character A-Z and a period at the end of the string
-    capital_with_punctuation = text.scan(/^[A-Z]|[\.!]$/)
-    capital_with_punctuation.length == 0
-    binding.pry
-    
+    capital_with_punctuation = text.scan(/(\A[A-Z]|[.!?]\z)/)
+    capital_with_punctuation.length >= 2
+    #(\A[A-Z]|[.!?]\z)
 end
 
 def valid_phone_number?(phone)
