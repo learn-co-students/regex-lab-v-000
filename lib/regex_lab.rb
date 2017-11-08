@@ -21,6 +21,7 @@ def words_five_letters_long(text)
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
+  # test for first character A-Z and a period at the end of the string
 
 end
 
