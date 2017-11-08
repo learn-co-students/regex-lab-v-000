@@ -22,8 +22,8 @@ end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
   # test for first character A-Z and a period at the end of the string
-    capital_with_punctuation = text.scan(/^[A-Z][\.!]$/)
-    capital_with_punctuation.any?
+    capital_with_punctuation = text.scan(/[^A-Z\.!]$/)
+    capital_with_punctuation.empty?
     binding.pry
 end
 
