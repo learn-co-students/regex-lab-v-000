@@ -29,6 +29,7 @@ end
 
 def valid_phone_number?(phone)
   valid = phone.scan(/\d{10}|[^\Wa-zA-Z]/)
- 
+ valid < valid_numbers.length
+  binding.pry
   
 end
