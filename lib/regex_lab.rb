@@ -11,19 +11,31 @@ end
 
 def words_starting_with_un_and_ending_with_ing(text)
   # match the "un" and "ing" then return the matching words
-  find_text = text.scan(/\w+[un][ing]/) 
- 
-  
+  find_text = text.scan(/\w+[un][ing]/)   
 end
 
 def words_five_letters_long(text)
+<<<<<<< HEAD
     five_words = text.scan(/\b\w{5}\b/)
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
     
+=======
+  #try regex with 5 characters then a space
+  # you can place the \b boundry at the beginning and end of regex to stop at a certain amount of characters
+  five_words = text.scan(/\b\w{5}\b/)
+end
+
+def first_word_capitalized_and_ends_with_punctuation?(text)
+  # test for first character A-Z and a period at the end of the string
+    capital_with_punctuation = text.scan(/(\A[A-Z]|[.!?]\z)/)
+    capital_with_punctuation.length >= 2
+    #(\A[A-Z]|[.!?]\z)
+>>>>>>> my-regex
 end
 
 def valid_phone_number?(phone)
-
+  valid = phone.match(/^\(?\d{3}\)?\s?\d{3}\s?\-?\d{4}$/)
+   
 end
