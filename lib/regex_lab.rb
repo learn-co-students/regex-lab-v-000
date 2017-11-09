@@ -28,8 +28,6 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
 end
 
 def valid_phone_number?(phone)
-  valid = phone.scan(/\d{10}|[^\Wa-zA-Z]/)
- valid < valid_numbers.length
-  binding.pry
-  
+  valid = phone.match(/^\(?\d{3}\)?\s?\d{3}\s?\-?\d{4}$/)
+   
 end
