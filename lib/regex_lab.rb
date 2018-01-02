@@ -23,16 +23,21 @@ def words_five_letters_long(text)
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
-    if text.match(/[A-Z].+[.?!]/)
+    if text.match(/\A[A-Z].+[.?!]\z/)
       true
     else
       false
-      # binding.pry
   end
 end
 
-def valid_ph
-  one_number?(phone)
-     phone.match (/(\d+)-(\d+)-(\d+)/)
-
+def valid_phone_number?(phone)
+  # binding.pry
+     if phone.match(/\(?\d{3}\)?\s?\(?\d{3}\)?-?\s?\d{4}\)?\b/)
+       # resources   https://regexr.com/3imk
+       # .scan will return an array all the time. if false.. While .match will return Nill
+       # so we cant use .scan becasue it will return something everytime.
+       true
+     else
+       false
+    end
 end
