@@ -29,3 +29,5 @@ def valid_phone_number?(phone)
     false
   end
 end
+
+# can take out if and else statements, rather putting a ? after the REGEX, and using true : false 
