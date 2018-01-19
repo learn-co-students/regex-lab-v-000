@@ -8,18 +8,19 @@ def starts_with_a_vowel?(word)
 end
 
 def words_starting_with_un_and_ending_with_ing(text)
-  text_array = text.split(" ")
-  matching_letters_array = text.scan(/(un)\w+(ing)/)
-  matching_letters = matching_letters_array[0]
-  starting_letters = matching_letters[0]
-  ending_letters = matching_letters[1]
-  matched_words = []
-  text_array.map do |word|
-    if word[0..1] == starting_letters && word[-3..-1] == ending_letters
-      matched_words << word
-    end
-  end
-  matched_words
+  # text_array = text.split(" ")
+  # matching_letters_array =
+  text.scan(/un\w+ing/)
+  # matching_letters = matching_letters_array[0]
+  # starting_letters = matching_letters[0]
+  # ending_letters = matching_letters[1]
+  # matched_words = []
+  # text_array.map do |word|
+  #   if word[0..1] == starting_letters && word[-3..-1] == ending_letters
+  #     matched_words << word
+  #   end
+  # end
+  # matched_words
 end
 
 def words_five_letters_long(text)
