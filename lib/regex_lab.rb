@@ -31,7 +31,5 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
 end
 
 def valid_phone_number?(phone)
-  phone.all? do |numbers|
-    numbers.match(/^\W?\w{3}\W?\w{3}\W?\w{4}$/)
-  end
+  phone.match(/^\(?[0-9]{3}\)?\s?[0-9]{3}\-?\s?[0-9]{4}$/) ? true : false
 end
