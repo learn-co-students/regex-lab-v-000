@@ -30,3 +30,9 @@ def valid_phone_number?(phone)
     false
   end
 end
+
+#Another way to write this method, displaying true : false 
+
+#def first_word_capitalized_and_ends_with_punctuation?(text)
+  #text.match(/^[A-Z].+[\.!?]$/) ? true : false
+#end
