@@ -16,4 +16,5 @@ end
 
 def valid_phone_number?(phone)
   phone.match(/\d{10}|\d{3}\s\d{3}\s\d{4}|\(...\)\d{7}|\(...\)\d{3}\-\d{4}/) ? true : false
+  # phone.match(/[0-9]{3}\W?[0-9]{3}\W?[0-9]{4}/) ? true : false
 end
