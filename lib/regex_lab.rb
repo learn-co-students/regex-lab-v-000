@@ -1,33 +1,21 @@
-
+require 'pry'
 
 def starts_with_a_vowel?(word)
-  if  word.match(/[aeiou]/)
-      true
-    else if word.match /[b-df-hj-np-tv-z]/
-      false
-    end
-  end
+  word.match(/\b[aeiou]/i)? true : false
 end
 
-
-
 def words_starting_with_un_and_ending_with_ing(text)
-  text.scan(/un+ing/)
-
+  text.scan(/un\w+ing/i)
 end
 
 def words_five_letters_long(text)
-  text.scan(/\w+un/)
+  text.scan(/\b[a-z]{5}\b/i)
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
-
+text.match(/^[A-Z].+\.$/)? true : false
 end
 
 def valid_phone_number?(phone)
-  phone_number_break = phone.scan(/(\d+)-(\d+)-(\d+)/)
-
-  phone_number_break.each do |numbers|
-  if numbers[0].is_numeric? == numbers[1].is_numeric? == numbers[0].is_numeric?
-  end
+phone.match(/^[()]?\d{3}[)]?[\s]?\d{3}[\s-]?\d{4}$/)? true : false
 end
