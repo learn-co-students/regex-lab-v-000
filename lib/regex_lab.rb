@@ -29,6 +29,17 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
   #they are used like boundaries
 end
 
+def valid_phone_number?(phone)
+  phone.match(/^\W?\d{3}\W?\d{3}\W?\d{4}/)
+  #start of line, any non word character in between them, a phone number
+  #seperated into two 3 digit segments and one 4 digit segment.
+  #scan is more like anytime something happens you want to know about it.
+  #scan checks for details
+  #match you want to find a certain thing. match checks what something looks like.
+  #match checks as the whole
+end
+
+
 =begin
 def words_five_letters_long(text)
   five_letter_words = Array.new
@@ -59,13 +70,3 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
   end
 end
 =end
-
-def valid_phone_number?(phone)
-  phone.match(/^\W?\d{3}\W?\d{3}\W?\d{4}/)
-  #start of line, any non word character in between them, a phone number
-  #seperated into two 3 digit segments and one 4 digit segment.
-  #scan is more like anytime something happens you want to know about it.
-  #scan checks for details
-  #match you want to find a certain thing. match checks what something looks like.
-  #match checks as the whole
-end
