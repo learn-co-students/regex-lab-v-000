@@ -1,9 +1,9 @@
 require "pry"
 def starts_with_a_vowel?(word)
-  binding.pry
-  if (word.match(/\b[aeiouyAEIOUY\b]/)
+  if word.match(/\b[aeiouyAEIOUY]/)
+true
 else
-  puts "Does not start with a vowel"
+  false
 end
 end
 
@@ -20,5 +20,5 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
 end
 
 def valid_phone_number?(phone)
-  \(?\d{3}\)?[- ]\d{3}-\d{4}
+#  \(?\d{3}\)?[- ]\d{3}-\d{4}
 end
