@@ -11,7 +11,12 @@ def words_five_letters_long(text)
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
-  (text).match(/\b[A-Z]+([A-Za-z]*\s*)*\W/) == true
+  m1 = /[A-Z]+[a-z\s]*\./.match(text)
+  if m1.class == MatchData
+    puts true
+  else
+    puts false
+  end
 end
 
 def valid_phone_number?(phone)
