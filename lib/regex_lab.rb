@@ -1,9 +1,11 @@
 def starts_with_a_vowel?(word)
-   Regexp.new(/[aeiou]/)
+   if word.match(/\[w+a || w+e || w+i || w+o || w+u]/)
+     true
+   end
 end
 
 def words_starting_with_un_and_ending_with_ing(text)
-
+   
 end
 
 def words_five_letters_long(text)
