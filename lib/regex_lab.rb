@@ -23,12 +23,8 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
 end
 
 def valid_phone_number?(phone)
- # if phone.scan(/\d{10}\b|[(]\d{3}[)]\d{3}[-]\d{4}\b|\d{3}\s\d{3}\s\d{4}\b|[(]\d{3}[)]\d{7}\b/)
-  if phone.scan(/\d/).length == 10
-    true
-  else
-    false
-  end
+# phone.scan(/\d{10}\b|[(]\d{3}[)]\d{3}[-]\d{4}\b|\d{3}\s\d{3}\s\d{4}\b|[(]\d{3}[)]\d{7}\b/) ? true : false
+ phone.scan(/\d/).length == 10 ? true : false
 
 # 2438894546
 #(718)891-1313
