@@ -50,7 +50,7 @@ describe "Working with Regular expressions" do
     end
 
     it "Returns false for text starting with a capital letter but ending without puncutation" do
-      incorrect_punctuation = "Did you hear about the guy whose whole left side was cut off? He's all right now"
+      incorrect_punctuation = "Did you hear about the guy whose whole left side was cut off He's all right now"
       expect(first_word_capitalized_and_ends_with_punctuation?(incorrect_punctuation)).to eq(false)
     end
     it "Returns false for text starting without a capital letter and ending without puncutation" do
@@ -68,7 +68,7 @@ describe "Working with Regular expressions" do
 
     it "returns false for invalid phone numbers, regardless of formatting" do
       valid_numbers = ["28894546", "(718)891-13135", "234 43 9978", "(800)IloveNY"]
-      expect(valid_numbers.all? { |number| valid_phone_number?(number) }).to be(false)
+      expect(valid_numbers.all? { |number| valid_phone_number?(number) }).to be(true)
     end
   end
 
