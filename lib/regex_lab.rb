@@ -23,7 +23,7 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
 
 end
 
-def valid_phone_number?(phone)
+def valid_phone_number_cheater?(phone)
   number_set = phone.scan(/\d/)
   length = number_set.length
   if length ==10
@@ -32,4 +32,8 @@ def valid_phone_number?(phone)
     false
   end
 
+end
+
+def valid_phone_number?(phone)
+  phone.match(/([0-9] *?){10}|(\([0-9]{3}\)(([0-9]{3}-[0-9]{4})|[0-9]{7})\b)/) ? true : false
 end
