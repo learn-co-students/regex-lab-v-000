@@ -24,10 +24,10 @@ end
 end
 
 def valid_phone_number?(phone)
- if phone.scan(/ (\(? [0-9]{3} \)? [ -]? [0-9]{3} [ -]? [0-9]{4}) /) == nil
-    return false
-  else
+ if phone.scan(/\d{3}+\W*+\d{3}\W*\d{4}\W*/)
     return true
+  else
+    return false
   end
 end
 
