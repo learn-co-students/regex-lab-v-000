@@ -11,15 +11,21 @@ def words_starting_with_un_and_ending_with_ing(text)
 end
 
 def words_five_letters_long(text)
-   if text.grep(/^\w{5}\s/)
-     return text.grep
-   end
+   text.scan(/\b\w{5}\b/)
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
-
+   if text.match(/^[A-Z].*\.$/) == nil
+    return false
+  else
+    return true
+  end
 end
 
 def valid_phone_number?(phone)
-
+  if phone.match(/\(?([0-9]{3})\)?([ -]?)([0-9]{3})([ -]?)([0-9]{4})/) == nil
+    return false
+  else
+    return true
+  end
 end
