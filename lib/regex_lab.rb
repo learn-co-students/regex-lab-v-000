@@ -11,9 +11,10 @@ def words_five_letters_long(text)
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
-  text.match(/^[A-Z].*[.!?]$/) != nil
+  text.match(/^[A-Z].*[\.!?]$/) != nil
   # Note: despite the capitalization error, this is acceptable by Regex somehow:
-  # This is a sentence. this is somehow correct despite “this” not being capitalized!
+  # "This is a sentence. this is somehow correct" despite “this” not being capitalized!
+  # The official solution has the same issue.
 end
 
 def valid_phone_number?(phone)
