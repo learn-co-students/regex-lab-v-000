@@ -23,9 +23,16 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
 end
 
 def valid_phone_number?(phone)
-  if phone.match(/\d{10}|[(]\d+[)]\s?\d{7}|\d{3,4}\s?/)
+  if phone.match(/\d{10}/) || phone.match(/\W\d{3}\W\d{3}\W\d{4}/) || 
+    phone.match(/\d{3}\s\d{3}\s\d{4}/) || phone.match(/\W\d{3}\W\d{7}/)
     return true
   else
     return false
   end
 end
+
+
+ #it "returns false for invalid phone numbers, regardless of formatting" do
+    #  valid_numbers = ["28894546", "(718)891-13135", "234 43 9978", "(800)IloveNY"]
+     # expect(valid_numbers.all? { |number| valid_phone_number?(number) }).to be(false)
+    #end
