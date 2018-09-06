@@ -23,8 +23,14 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
 end
 
 def valid_phone_number?(phone)
-  digit_count = phone.scan(/(\d+)/)
+  if phone.scan(/\d{10}/) #10 digits 
     true
+  elsif phone.scan(/[(]\d{3}[)]\d{3}[-]\d{4}\b/) #(718)891-1313
+    true 
+  elsif phone.scan(/\d{10}/) #234 435 9978
+    true 
+  elsif phone.scan(/\d{10}/) #(800)4261134
+    true 
   else 
     false 
   end 
