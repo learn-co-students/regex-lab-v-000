@@ -23,5 +23,9 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
 end
 
 def valid_phone_number?(phone)
-
+  digit_count = phone.scan(/(\d+)/)
+    true
+  else 
+    false 
+  end 
 end
