@@ -29,7 +29,7 @@ def valid_phone_number?(phone)
     true 
   elsif phone.scan(/\d{3}\s{1}\d{3}\s{1}\d{4}\b/) #234 435 9978
     true 
-  elsif phone.scan(/\d{10}/) #(800)4261134
+  elsif phone.scan(/[(]\d{3}[)]\d{7}/) #(800)4261134
     true 
   else 
     false 
