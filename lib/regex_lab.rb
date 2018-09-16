@@ -18,3 +18,7 @@ end
 def valid_phone_number?(number)
   !!/([0-9]{10})|(\(?[0-9]{3}\)[0-9]{3}-[0-9]{4}\b)|(\(?[0-9]{3}\)[0-9]{7}\b)|(s*(?:\d\s*){10})/.match(number)
 end
+
+# def starts_with_a_vowel?(word)
+#   word.match(/^[aeiouAEIOU]\w+/) ? true : false
+# end
