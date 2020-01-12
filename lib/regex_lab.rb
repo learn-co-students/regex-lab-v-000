@@ -33,19 +33,19 @@ end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
   # !!text.match(/^[A-Z].*\W$/)
-  !!text.match(^[A-Z].*[\.!?]$)
 
   # ^[A-Z] => check the beginning of the string for any capital letter
   # .* => followed by zero or more of any single character - can't do just word characters, because you'll miss spaces
   # \W$ => check the end of the sting for a non-word character (punctuation)
 
   # could also do ^[A-Z].+\W$
+  # could also do ^[A-Z].*[\.!?]$ => [\.!?]$ looks for any of these characters at end
   # could also combine: !!text.match(/^[A-Z]/) && !!text.match(/\W$/)
 end
 
 
 def valid_phone_number?(phone)
-  # !!phone.match(/\W*\d{3}\W*\d{3}\W*\d{4}\b/)
+  !!phone.match(/\W*\d{3}\W*\d{3}\W*\d{4}\b/)
 
 
   # \W* => check for 0 or more nonword characters - this allows room for spaces and () around numbers
@@ -59,4 +59,7 @@ def valid_phone_number?(phone)
 
   #could also do
   # (\d+).(\d+).(\d+)  => Works but leaves a LOT of holes
+
+  # official soln regex: ([0-9] *){10}|(\([0-9]{3}\)(([0-9]{3}-[0-9]{4})|[0-9]{7})\b)
+  # no clue what this is doing though
 end
