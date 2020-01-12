@@ -5,6 +5,7 @@ def starts_with_a_vowel?(word)
   # match returns matchdata obj
 
   # could do \b[aeiouAEIOU]\w*
+  # or /\A[aeiou]/i => \A targets begining of string; i specifies that case insensitivity
   # note that official soln wouldn't successfully match single-letter words like I or a
 end
 
@@ -19,6 +20,7 @@ def words_starting_with_un_and_ending_with_ing(text)
   # \bun[a-zA-Z]+ing\b  # won't catch weird cases - makes sure ing is at the word boundary
 
   # could also do \bun\w+ing\b
+  # could also do /un\w+ing/
 end
 
 def words_five_letters_long(text)
@@ -28,11 +30,11 @@ def words_five_letters_long(text)
   # \w{5} => for exactly 5 word characters
   # \b => followed by another word boundary (so you don't get words that are longer)
 
-  #could also do \b[A-Za-z]{5}\b
+  #could also do \b[A-Za-z]{5}\b or /\b[a-z]{5}\b/
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
-  # !!text.match(/^[A-Z].*\W$/)
+  !!text.match(/^[A-Z].*\W$/)
 
   # ^[A-Z] => check the beginning of the string for any capital letter
   # .* => followed by zero or more of any single character - can't do just word characters, because you'll miss spaces
@@ -41,12 +43,12 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
   # could also do ^[A-Z].+\W$
   # could also do ^[A-Z].*[\.!?]$ => [\.!?]$ looks for any of these characters at end
   # could also combine: !!text.match(/^[A-Z]/) && !!text.match(/\W$/)
+  # could also do ^[A-Z].+\.$
 end
 
 
 def valid_phone_number?(phone)
   !!phone.match(/\W*\d{3}\W*\d{3}\W*\d{4}\b/)
-
 
   # \W* => check for 0 or more nonword characters - this allows room for spaces and () around numbers
       # e.g. (718)891-1313 or (718)891-1313
