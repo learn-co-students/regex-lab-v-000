@@ -1,0 +1,7 @@
+require_relative './regex_lab.rb'
+
+words_string = "unassuming ambiguous understanding pomp circumstance uninteresting uncompromising grouchy corollary"
+
+words = words_starting_with_un_and_ending_with_ing(words_string)
+
+puts words
