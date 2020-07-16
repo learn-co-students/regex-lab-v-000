@@ -1,4 +1,6 @@
-require 'spec_helper'
+
+require 'spec_helper.rb'
+
 
 describe "Working with Regular expressions" do
   describe "#starts_with_a_vowel?" do
