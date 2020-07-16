@@ -23,7 +23,7 @@ describe "Working with Regular expressions" do
   describe "#words_starting_with_un_and_ending_with_ing" do
     it "returns an array with the words starting with 'un' and ending with 'ing'" do
       words_string = "unassuming ambiguous understanding pomp circumstance uninteresting uncompromising grouchy corollary"
-      
+
       expect(words_starting_with_un_and_ending_with_ing(words_string).count).to eq(4)
       expect(words_starting_with_un_and_ending_with_ing(words_string)).to include("understanding")
       expect(words_starting_with_un_and_ending_with_ing(words_string)).not_to include("pomp")
@@ -50,7 +50,7 @@ describe "Working with Regular expressions" do
     end
 
     it "Returns false for text starting with a capital letter but ending without puncutation" do
-      incorrect_punctuation = "Did you hear about the guy whose whole left side was cut off? He's all right now"
+      incorrect_punctuation = "Did you hear about the guy whose whole left side was cut off? He's all right now!"
       expect(first_word_capitalized_and_ends_with_punctuation?(incorrect_punctuation)).to eq(false)
     end
     it "Returns false for text starting without a capital letter and ending without puncutation" do
