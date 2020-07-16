@@ -3,7 +3,7 @@ require 'spec_helper'
 describe "Working with Regular expressions" do
   describe "#starts_with_a_vowel?" do
     it "returns true for words starting with a vowel" do
-      match = %w{ afoot Excellent incredible Absolute unreal Inconceivable octopus }
+      match = %w{afoot Excellent incredible Absolute unreal Inconceivable octopus }
 
       match.each do |word|
         expect(starts_with_a_vowel?(word)).to be(true)
@@ -11,7 +11,7 @@ describe "Working with Regular expressions" do
     end
 
     it "returns false for words starting with a consonant" do
-      do_not_match = %w{ chandoo Crenel crooked Flimsy folksy Dog Hermit
+      do_not_match = %w{chandoo Crenel crooked Flimsy folksy Dog Hermit
      makeshift Palazzi sixfold Truth }
 
       do_not_match.each do |word|
