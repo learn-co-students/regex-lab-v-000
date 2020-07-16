@@ -40,7 +40,7 @@ describe "Working with Regular expressions" do
   end
 
   describe "#first_word_capitalized_and_ends_with_punctuation?" do
-    it "Returns true for text starting with a capital letter and ending with puncutation" do
+      it "Returns true for text starting with a capital letter and ending with puncutation" do
       correct_punctuation = "I stepped on a Corn Flake, now I'm a cereal killer."
       expect(first_word_capitalized_and_ends_with_punctuation?(correct_punctuation)).to eq(true)
     end
