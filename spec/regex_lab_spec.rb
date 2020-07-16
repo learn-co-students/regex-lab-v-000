@@ -1,10 +1,10 @@
 require 'spec_helper'
+#require_relative './spec_helper'
 
 describe "Working with Regular expressions" do
   describe "#starts_with_a_vowel?" do
     it "returns true for words starting with a vowel" do
       match = %w{ afoot Excellent incredible Absolute unreal Inconceivable octopus }
-
       match.each do |word|
         expect(starts_with_a_vowel?(word)).to be(true)
       end
@@ -23,7 +23,7 @@ describe "Working with Regular expressions" do
   describe "#words_starting_with_un_and_ending_with_ing" do
     it "returns an array with the words starting with 'un' and ending with 'ing'" do
       words_string = "unassuming ambiguous understanding pomp circumstance uninteresting uncompromising grouchy corollary"
-      
+
       expect(words_starting_with_un_and_ending_with_ing(words_string).count).to eq(4)
       expect(words_starting_with_un_and_ending_with_ing(words_string)).to include("understanding")
       expect(words_starting_with_un_and_ending_with_ing(words_string)).not_to include("pomp")
@@ -54,8 +54,7 @@ describe "Working with Regular expressions" do
       expect(first_word_capitalized_and_ends_with_punctuation?(incorrect_punctuation)).to eq(false)
     end
     it "Returns false for text starting without a capital letter and ending without puncutation" do
-      incorrect_punctuation = "when fish are in schools, they sometimes take debate
-"
+      incorrect_punctuation = "when fish are in schools, they sometimes take debate"
       expect(first_word_capitalized_and_ends_with_punctuation?(incorrect_punctuation)).to eq(false)
     end
   end
@@ -63,14 +62,14 @@ describe "Working with Regular expressions" do
   describe "#valid_phone_number?" do
     it "returns true for valid phone numbers, regardless of formatting" do
       valid_numbers = ["2438894546", "(718)891-1313", "234 435 9978", "(800)4261134"]
-      expect(valid_numbers.all? { |number| valid_phone_number?(number) }).to be(true)
-    end
+      expect(valid_phone_number?(valid_numbers)).to be(true)
+      #expect(valid_numbers.all? { |phone| valid_phone_number?(phone) }).to be(true)
+      end
 
     it "returns false for invalid phone numbers, regardless of formatting" do
       valid_numbers = ["28894546", "(718)891-13135", "234 43 9978", "(800)IloveNY"]
-      expect(valid_numbers.all? { |number| valid_phone_number?(number) }).to be(false)
+      expect(valid_phone_number?(valid_numbers)).to be(false)
+      #expect(valid_numbers.all? { |phone| valid_phone_number?(phone) }).to be(true)
     end
   end
-
-
 end
