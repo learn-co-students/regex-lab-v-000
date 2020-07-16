@@ -71,6 +71,4 @@ describe "Working with Regular expressions" do
       expect(valid_numbers.all? { |number| valid_phone_number?(number) }).to be(false)
     end
   end
-
-
 end
